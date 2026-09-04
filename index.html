@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Inventory Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="page__header">
+      <h1>Product Inventory Dashboard</h1>
+    </header>
+
+    <section class="controls">
+      <div class="controls__field">
+        <label for="searchInput">search</label>
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Enter product name"
+        />
+      </div>
+
+      <div class="controls__field">
+        <label for="categoryFilter">category</label>
+        <select id="categoryFilter">
+          <option value="All">All</option>
+          <option value="Accessories">Accessories</option>
+          <option value="Displays">Displays</option>
+          <option value="Storage">Storage</option>
+          <option value="Components">Components</option>
+        </select>
+      </div>
+
+      <div class="controls__actions">
+        <button id="searchBtn">Search</button>
+        <button id="resetBtn" class="secondary">Reset</button>
+      </div>
+    </section>
+
+    <section class="summary">
+      <div class="summary__card">
+        <span class="summary__label">Total Inventory Value</span>
+        <span id="totalInventoryValue" class="summary__value">₱0</span>
+      </div>
+      <div class="summary__card">
+        <span class="summary__label">Low-Stock Products</span>
+        <span id="lowStockCount" class="summary__value">0</span>
+      </div>
+      <div class="summary__card">
+        <span class="summary__label">Out-of-Stock Products</span>
+        <span id="outOfStockCount" class="summary__value">0</span>
+      </div>
+    </section>
+
+    <section class="products">
+      <p id="noResultsMessage" style="display: none;">No products found</p>
+      <div id="productList" class="product-list"></div>
+    </section>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
